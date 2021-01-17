@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<title>Color Generator</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body>
+
+    <div class="text col-5" >
+
+        <div align="center"> 
+
+            <h1 style="color: mistyrose;">Motorbike Color Changer</h1>
+
+        </div>
+
+        <div align="center">
+
+            <div id="pic" class="col-11"style=" height:100%; width: 90%; background-color: white;" class="col-12">
+
+            <img src="motor.png"/></div>
+
+        </div>
+
+        <div  class="asd">
+
+            <div class="col-10">
+
+                <h1 style="font-size:120%; margin-left: 15%; color:white;"> Generate Random Color</h1>
+
+                <button style="height:25%; margin-left: 15%; color:white; background-color: rgb(3, 197, 45); border-radius: 10px;
+
+                width: 35%;
+
+                font-size: 75%; " class="col-10" onclick="gen()">Generate</button>
+
+            </div>
+
+            <div class="color-10">
+
+                <h1 style="font-size:120%; color:white;"> Generate Specific Color</h1>
+
+                <select name="color" id="qwe" class="color">
+
+                    <option value='1'>Blue</option>
+
+                    <option value='2'>Grey</option>
+
+                    <option value='3'>Green</option>
+
+                    <option value='4'>Yellow</option>
+
+                    <option value='5'>Light Blue</option>
+
+                    <option value='6'>Black</option>
+
+                </select>
+
+            <div style="margin-top: 5px;" class="col-10">
+
+            <button class="button" style="background-color:rgb(66, 162, 179) ; color:rgb(255, 255, 255)" onclick="changeColor()">Show</button>
+
+            <button value="Reset" class="button" style="background-color: grey; color:white" onclick="neww()">Reset</button></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<style>
+
+    
+
+html {
+
+font-family: Arial;
+
+background-image: url(".jpg");
+
+height:100%;
+
+background-position: fixed;
+
+background-repeat: no-repeat;
+
+background-size: cover;
+
+
+
+}
+
+.text{
+
+
+
+background-color: rgba(0,0,0, 0.70);
+
+position:absolute;
+
+top: 50%;
+
+left: 50%;
+
+transform: translate(-60%, -40%);
+
+width:50%;
+
+display:grid;
+
+grid-template-rows: 20% 55% 30%;
+
+}
+
+img{
+
+    height:100%;
+
+    width:100%;
+
+}
+
+.asd{
+
+    display:grid;
+
+    grid-template-columns: 50% 50%;
+
+}
+
+select{
+
+    width:55%;
+
+    height:20%
+
+}
+
+.button{
+
+    height:40%;
+
+    width: 25%;
+
+   
+
+    border-radius: 5px;
+
+}
+
+</style>
+
+<script type="text/javascript">
+
+var kulay = ['blue','gray','green','yellow','lightblue','black'];
+
+    var kulayIndex = 0;
+
+    function gen(){
+
+        var numRand = Math.floor(Math.random() * 6);
+
+        var color = document.getElementById("pic");
+
+        color.style.backgroundColor = kulay[numRand];
+
+    }
+
+    function changeColor() {
+
+        var r = document.getElementById("qwe").selectedIndex;
+
+        var p=document.getElementsByTagName("option")[r].value;
+
+        if(p=="1"){
+
+         var color = document.getElementById("pic");
+
+        color.style.backgroundColor = kulay[0];
+
+        }
+
+        else if(p=='2'){
+
+            var color = document.getElementById("pic");
+
+        color.style.backgroundColor = kulay[1];
+
+        }
+
+        else if(p=='3'){
+
+            var color = document.getElementById("pic");
+
+        color.style.backgroundColor = kulay[2];
+
+        }
+
+        else if(p=='4'){
+
+            var color = document.getElementById("pic");
+
+        color.style.backgroundColor = kulay[3];
+
+        }
+
+        else if(p=='5'){
+
+            var color = document.getElementById("pic");
+
+        color.style.backgroundColor = kulay[4];
+
+        }
+
+        else if(p=='6'){
+
+            var color = document.getElementById("pic");
+
+        color.style.backgroundColor = kulay[5];
+
+        }
+
+        else{
+
+         var color = document.getElementById("pic");
+
+        color.style.backgroundColor = kulay[6];
+
+        }
+
+ 
+
+    }
+
+    function neww(){
+
+        var color = document.getElementById("pic");
+
+        document.getElementById("pic").style.backgroundColor = "white";
+
+    }
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
